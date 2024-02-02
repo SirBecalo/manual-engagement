@@ -1,0 +1,35 @@
+name: Run Python Script and Commit Outputs
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8' # Specify your Python version here
+      
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install numpy pandas matplotlib kaleido # Add any other libraries as needed
+
+      
+    - name: Run Script
+      run: python All_engagment_graphs.py
+      working-directory: ./ # Specify if your script is in a subdirectory
+      
+    - name: Commit and Push Outputs
+      uses: EndBug/add-and-commit@v7
+      with:
+        message: 'Automatically generated images from script'
+        add: '*.png' # Change this to the correct file extension of your output images
+        cwd: './' # Change if your images are in a subdirectory
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
