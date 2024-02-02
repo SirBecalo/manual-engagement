@@ -166,7 +166,6 @@ ar_week_folders = [
     "weeks/ar/jan14",
     "weeks/ar/jan21"
 ]
-
 saudi_week_folders = [
     "weeks_saudi/dec24",
     "weeks_saudi/dec31",
