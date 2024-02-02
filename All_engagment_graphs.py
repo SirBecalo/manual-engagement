@@ -162,6 +162,7 @@ ar_week_folders = [
     "weeks/ar/dec17",
     "weeks/ar/dec10",
     "weeks/ar/dec31",
+    "weeks/ar/jan8",
     "weeks/ar/jan14",
     "weeks/ar/jan21"
 ]
