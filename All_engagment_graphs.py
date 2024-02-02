@@ -151,30 +151,30 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
     # The function is now updated with a distinct color scheme for English and Arabic data.
 
 en_week_folders = [
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\dec17",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\dec24",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\dec31",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\jan8",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\jan14",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\en\jan21"
-
+    "weeks/en/dec17",
+    "weeks/en/dec24",
+    "weeks/en/dec31",
+    "weeks/en/jan8",
+    "weeks/en/jan14",
+    "weeks/en/jan21"
 ]
 ar_week_folders = [
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\dec17",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\dec10",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\dec31",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\jan8",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\jan14",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks\ar\jan21"
+    "weeks/ar/dec17",
+    "weeks/ar/dec10",
+    "weeks/ar/dec31",
+    "weeks/ar/jan8",
+    "weeks/ar/jan14",
+    "weeks/ar/jan21"
+]
 
-]
 saudi_week_folders = [
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks_saudi\dec24",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks_saudi\dec31",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks_saudi\jan8",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks_saudi\jan14",
-    r"C:\Users\Ahmed\Desktop\Claps\Claps-All-Hands\weeks_saudi\jan21",
+    "weeks_saudi/dec24",
+    "weeks_saudi/dec31",
+    "weeks_saudi/jan8",
+    "weeks_saudi/jan14",
+    "weeks_saudi/jan21",
 ]
+
 
 visualize_weekly_engagement(en_week_folders, "EN_Engagment_jan21")
 visualize_weekly_engagement(ar_week_folders, "AR_Engagment_jan21")
