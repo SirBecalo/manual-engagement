@@ -150,6 +150,12 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
     plt.show()
     # The function is now updated with a distinct color scheme for English and Arabic data.
 
+
+#Step 1: Create a new subfolder inside weeks/ar, weeks/en, and weeks_saudi. the folder name should be the first day of the engagment week (open weeks/ar and weeks/en to see previous example)
+#Step 2: download the previous week's files from Braze
+#Step 3: place the english files into weeks/en/(your new subfolder) and the arabic files into weeks/ar/(your new subfolder), and Saudi files into weeks_saudi/(your new subfolder)
+#Step 4: Below, Add the new subfolder name as the last line in each of the 3 lists 
+#Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
 en_week_folders = [
     "weeks/en/dec17",
     "weeks/en/dec24",
@@ -173,8 +179,8 @@ saudi_week_folders = [
     "weeks_saudi/jan21",
 ]
 
-week_name = "EN_Engagment_jan21"
-visualize_weekly_engagement(en_week_folders, "Latest/"+week_name)
+#Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
+visualize_weekly_engagement(en_week_folders, "Latest/EN_Engagment_jan21")
 visualize_weekly_engagement(ar_week_folders, "Latest/AR_Engagment_jan21")
 visualize_weekly_engagement(saudi_week_folders, "Latest/saudi_Engagment_jan21")
 visualize_combined_engagement(en_week_folders, ar_week_folders, "Latest/Combined_Engagement_ColorUpdated_jan21")
