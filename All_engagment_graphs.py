@@ -146,7 +146,7 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
     ax.set_ylabel("Number of Users")
     ax.set_title("Weekly Email Open Frequencies (EN & AR)")
     plt.tight_layout()
-    plt.savefig(img_name)
+    plt.savefig("latest/"+img_name)
     plt.show()
     # The function is now updated with a distinct color scheme for English and Arabic data.
 
