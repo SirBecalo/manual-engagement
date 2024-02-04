@@ -86,8 +86,7 @@ def visualize_weekly_engagement(week_folder_paths, img_name):
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles[::-1], labels[::-1], title="Open Frequency", loc='upper center', bbox_to_anchor=(1, 0.5))
     plt.tight_layout()
-    plt.savefig(img_name)
-    
+    plt.savefig(img_name)  
 def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
     """
     Generate a stacked bar chart representing email open frequency for multiple weeks 
