@@ -173,8 +173,8 @@ saudi_week_folders = [
     "weeks_saudi/jan21",
 ]
 
-
-visualize_weekly_engagement(en_week_folders, "Latest/EN_Engagment_jan21")
+week_name = "EN_Engagment_jan21"
+visualize_weekly_engagement(en_week_folders, "Latest/"+week_name)
 visualize_weekly_engagement(ar_week_folders, "Latest/AR_Engagment_jan21")
 visualize_weekly_engagement(saudi_week_folders, "Latest/saudi_Engagment_jan21")
 visualize_combined_engagement(en_week_folders, ar_week_folders, "Latest/Combined_Engagement_ColorUpdated_jan21")
