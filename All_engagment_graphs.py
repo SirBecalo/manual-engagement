@@ -159,6 +159,7 @@ en_week_folders = [
     "weeks/en/jan21"
 ]
 ar_week_folders = [
+    "fuck urmom path"
     "weeks/ar/dec17",
     "weeks/ar/dec10",
     "weeks/ar/dec31",
