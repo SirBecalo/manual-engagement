@@ -156,21 +156,23 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
 #Step 4: Below, Add the new subfolder name as the last line in each of the 3 lists 
 #Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
 en_week_folders = [
-    "weeks/en/dec24",
+    
     "weeks/en/dec31",
     "weeks/en/jan8",
     "weeks/en/jan14",
     "weeks/en/jan21",
     "weeks/en/jan28",
+    "weeks/en/feb4",
 ]
 
 ar_week_folders = [
-    "weeks/ar/dec24",
+    
     "weeks/ar/dec31",
     "weeks/ar/jan8",
     "weeks/ar/jan14",
     "weeks/ar/jan21",
     "weeks/ar/jan28",
+    "weeks/ar/feb4",
 
 ]
 
