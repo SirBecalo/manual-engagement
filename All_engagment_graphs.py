@@ -181,10 +181,12 @@ saudi_week_folders = [
     "weeks_saudi/jan14",
     "weeks_saudi/jan21",
     "weeks_saudi/jan28",
+    "weeks_saudi/janfeb4",
 ]
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
 visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_feb4")
 visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_feb4")
-visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_jan28")
-visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_jan28")
+visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb")
+visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb4")
+
