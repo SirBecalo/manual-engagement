@@ -181,7 +181,7 @@ saudi_week_folders = [
     "weeks_saudi/jan14",
     "weeks_saudi/jan21",
     "weeks_saudi/jan28",
-    "weeks_saudi/janfeb4",
+    "weeks_saudi/feb4",
 ]
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
