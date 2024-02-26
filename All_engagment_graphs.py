@@ -157,36 +157,41 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
 #Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
 en_week_folders = [
     
-    "weeks/en/dec31",
-    "weeks/en/jan8",
+
     "weeks/en/jan14",
     "weeks/en/jan21",
     "weeks/en/jan28",
     "weeks/en/feb4",
+    "weeks/en/feb11",
+    "weeks/en/feb18",
+
 ]
 
 ar_week_folders = [
     
-    "weeks/ar/dec31",
-    "weeks/ar/jan8",
+    
     "weeks/ar/jan14",
     "weeks/ar/jan21",
     "weeks/ar/jan28",
     "weeks/ar/feb4",
+    "weeks/ar/feb11",
+    "weeks/ar/feb18",
 
 ]
 
 saudi_week_folders = [
-    "weeks_saudi/jan8",
     "weeks_saudi/jan14",
     "weeks_saudi/jan21",
     "weeks_saudi/jan28",
     "weeks_saudi/feb4",
+    "weeks_saudi/feb11",
+    "weeks_saudi/feb18",
+
 ]
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
-visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_feb4")
-visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_feb4")
-visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb")
-visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb4")
+visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_feb18")
+visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_feb18")
+visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb18")
+visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb18")
 
