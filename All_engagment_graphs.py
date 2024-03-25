@@ -18,20 +18,24 @@ def generate_read_frequency(week_folder_path):
     - DataFrame: read_frequency table for the week.
     """
     # Step 1: Load CSVs from a Folder
-    user_ids = []
-    for filename in os.listdir(week_folder_path):
-        if filename.endswith(".csv"):
-            file_path = os.path.join(week_folder_path, filename)
-            day_data = pd.read_csv(file_path, usecols=[0])
-            user_ids.extend(day_data.iloc[:, 0].tolist())  # Extract the first column as a series
+    user_ids = [] # to eventually contain a list for each day's unique opens. (list of lists)
+    for filename in os.listdir(week_folder_path): # loop over each csv from the week's folder
+        if filename.endswith(".csv"): # ommit non-csvs
+            file_path = os.path.join(week_folder_path, filename) # get the full file path for each csv
+            day_data = pd.read_csv(file_path, usecols=[0]) # read each file's first column
+            user_ids.extend(day_data.iloc[:, 0].tolist())  # convert the column to a list, append it to user_ids
     
+            # now user_ids is a list of lists, each sublist containing unique opens of a specific day.
+
     # Step 2: Combine & Count User IDs
-    user_counts = pd.Series(user_ids).value_counts()
-    
+    user_counts = pd.Series(user_ids).value_counts()    # creates a user_counts series, counting each user's occurences. For exmaple, frequency of user X opening: 3 times a week
+
     # Step 3: Generate read_frequency Table
-    frequency_series = user_counts.value_counts()
+    frequency_series = user_counts.value_counts()   # creates a table for frquency of frequencies. For example: frequency of opening 5 times: 1000.
     frequency_series.name = "tally"  # Explicitly setting the name to avoid naming collisions
-    frequency_df = frequency_series.reset_index()
+    frequency_df = frequency_series.reset_index() 
+    print(frequency_series.index)
+
     frequency_df.columns = ["frequency", "tally"]
     frequency_df["percentage"] = (frequency_df["tally"] / frequency_df["tally"].sum()) * 100
     frequency_df = frequency_df.sort_values(by="frequency").reset_index(drop=True)
@@ -156,26 +160,23 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
 #Step 4: Below, Add the new subfolder name as the last line in each of the 3 lists 
 #Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
 en_week_folders = [
-    
-
     "weeks/en/jan14",
     "weeks/en/jan21",
     "weeks/en/jan28",
     "weeks/en/feb4",
     "weeks/en/feb11",
     "weeks/en/feb18",
-
+    "weeks/en/mar17",
 ]
 
 ar_week_folders = [
-    
-    
     "weeks/ar/jan14",
     "weeks/ar/jan21",
     "weeks/ar/jan28",
     "weeks/ar/feb4",
     "weeks/ar/feb11",
     "weeks/ar/feb18",
+    "weeks/ar/mar17",
 
 ]
 
@@ -190,8 +191,8 @@ saudi_week_folders = [
 ]
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
-visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_feb18")
-visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_feb18")
-visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb18")
-visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb18")
+visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_mar_17")
+visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_mar_17")
+#visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb18")
+#visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb18")
 
