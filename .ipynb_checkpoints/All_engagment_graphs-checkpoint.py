@@ -74,12 +74,10 @@ def visualize_weekly_engagement(week_folder_paths, img_name):
         bottom_value = 0  # To stack bars
         for _, row in data.iterrows():
             label = f"Frequency {row['frequency']}" if week_index == 0 else ""  # Avoid duplicate labels
-            ax.bar(week_index, row['tally'],bottom=bottom_value, label=label, color=color_map.get(row['frequency'], "#333333"))
+            ax.bar(week_index, row['tally'], bottom=bottom_value, label=label, color=color_map.get(row['frequency'], "#333333"))
             # Adding percentage text inside bars
             ax.text(week_index, bottom_value + (0.5 * row['tally']), f"{row['percentage']:.2f}%", 
                     ha='center', va='center', color='white', fontsize=10)
-            ax.set_xlim(-1,6)
-
             bottom_value += row['tally']
         # Labeling total tally on top of each bar
         ax.text(week_index, bottom_value, str(int(bottom_value)), ha='center', va='bottom', color='black', fontsize=10)
@@ -161,31 +159,40 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
 #Step 3: place the english files into weeks/en/(your new subfolder) and the arabic files into weeks/ar/(your new subfolder), and Saudi files into weeks_saudi/(your new subfolder)
 #Step 4: Below, Add the new subfolder name as the last line in each of the 3 lists 
 #Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
-EG_en_week_folders = [
-    "weeks/EG/en/feb18",
-    "weeks/EG/en/mar17",
-    "weeks/EG/en/mar24",
+en_week_folders = [
+    "weeks/en/jan14",
+    "weeks/en/jan21",
+    "weeks/en/jan28",
+    "weeks/en/feb4",
+    "weeks/en/feb11",
+    "weeks/en/feb18",
+    "weeks/en/mar17",
 ]
 
-EG_ar_week_folders = [
-    "weeks/EG/ar/feb18",
-    "weeks/EG/ar/mar17",
-    "weeks/EG/ar/mar24",
+ar_week_folders = [
+    "weeks/ar/jan14",
+    "weeks/ar/jan21",
+    "weeks/ar/jan28",
+    "weeks/ar/feb4",
+    "weeks/ar/feb11",
+    "weeks/ar/feb18",
+    "weeks/ar/mar17",
+
 ]
 
-KSA_ar_week_folders = [
-    "weeks/KSA/ar/mar24",
-]
+saudi_week_folders = [
+    "weeks_saudi/jan14",
+    "weeks_saudi/jan21",
+    "weeks_saudi/jan28",
+    "weeks_saudi/feb4",
+    "weeks_saudi/feb11",
+    "weeks_saudi/feb18",
 
-KSA_en_week_folders = [
-    "weeks/KSA/en/mar24",
 ]
-
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
-visualize_weekly_engagement(EG_en_week_folders, "latest/EG_EN_mar24")
-visualize_weekly_engagement(EG_ar_week_folders, "latest/EG_AR_mar24")
-visualize_weekly_engagement(KSA_ar_week_folders, "latest/KSA_AR_mar24")
-visualize_weekly_engagement(KSA_en_week_folders, "latest/KSA_EN_mar24")
+visualize_weekly_engagement(en_week_folders, "latest/EN_Engagment_mar_17")
+visualize_weekly_engagement(ar_week_folders, "latest/AR_Engagment_mar_17")
 #visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb18")
+#visualize_weekly_engagement(saudi_week_folders, "latest/Saudi_Engagment_feb18")
 
