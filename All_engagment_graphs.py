@@ -78,7 +78,7 @@ def visualize_weekly_engagement(week_folder_paths, img_name):
             # Adding percentage text inside bars
             ax.text(week_index, bottom_value + (0.5 * row['tally']), f"{row['percentage']:.2f}%", 
                     ha='center', va='center', color='white', fontsize=10)
-            ax.set_xlim(-1,6)
+            ax.set_xlim(-1,6) #makes the x axis scale fixed, to fit 6 bars even when there are less. this way, the bars are not "Scaled in" when you have less than 6 weeks being displayed
 
             bottom_value += row['tally']
         # Labeling total tally on top of each bar
