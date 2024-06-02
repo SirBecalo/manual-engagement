@@ -162,30 +162,45 @@ def visualize_combined_engagement(en_week_folders, ar_week_folders, img_name):
 #Step 4: Below, Add the new subfolder name as the last line in each of the 3 lists 
 #Step 4.1: should be added like the previous line, aka "weeks/en/(your subfoler name)" for example
 EG_en_week_folders = [
-    "weeks/EG/en/feb18",
-    "weeks/EG/en/mar17",
-    "weeks/EG/en/mar24",
+    "weeks/EG/en/apr21",
+    "weeks/EG/en/apr28",
+    "weeks/EG/en/may7",
+    "weeks/EG/en/may12",
+    "weeks/EG/en/may19",
+    "weeks/EG/en/may26",
 ]
 
 EG_ar_week_folders = [
-    "weeks/EG/ar/feb18",
-    "weeks/EG/ar/mar17",
-    "weeks/EG/ar/mar24",
+    "weeks/EG/ar/apr21",
+    "weeks/EG/ar/apr28",
+    "weeks/EG/ar/may7",
+    "weeks/EG/ar/may12",
+    "weeks/EG/ar/may19",
+    "weeks/EG/ar/may26",
 ]
 
 KSA_ar_week_folders = [
-    "weeks/KSA/ar/mar24",
+    "weeks/KSA/ar/apr21",
+    "weeks/KSA/ar/apr28",
+    "weeks/KSA/ar/may5",
+    "weeks/KSA/ar/may12",
+    "weeks/KSA/ar/may19",
+    "weeks/KSA/ar/may26",
 ]
-
 KSA_en_week_folders = [
-    "weeks/KSA/en/mar24",
+    "weeks/KSA/en/apr21",
+    "weeks/KSA/en/apr28",
+    "weeks/KSA/en/may5",
+    "weeks/KSA/en/may12",
+    "weeks/KSA/en/may19",
+    "weeks/KSA/en/may26",
 ]
 
 
 #Step 5: edit the  quotation marks in each of the 4 lines below (such as "Latest/EN_Engagment_jan21") to the right date. so if its jan21 it will be jan 28, if its feb4 it will be feb11
-visualize_weekly_engagement(EG_en_week_folders, "latest/EG_EN_mar24")
-visualize_weekly_engagement(EG_ar_week_folders, "latest/EG_AR_mar24")
-visualize_weekly_engagement(KSA_ar_week_folders, "latest/KSA_AR_mar24")
-visualize_weekly_engagement(KSA_en_week_folders, "latest/KSA_EN_mar24")
+visualize_weekly_engagement(EG_en_week_folders, "latest/EG_EN_may26")
+visualize_weekly_engagement(EG_ar_week_folders, "latest/EG_AR_may26")
+visualize_weekly_engagement(KSA_en_week_folders, "latest/KSA_EN_may26")
+visualize_weekly_engagement(KSA_ar_week_folders, "latest/KSA_AR_may26")
 #visualize_combined_engagement(en_week_folders, ar_week_folders, "latest/Combined_Engagement_feb18")
 
